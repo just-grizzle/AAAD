@@ -14,3 +14,8 @@ jobs:
     steps:
     - name: Gradle Build Action
       uses: gradle/gradle-build-action@v2.1.5
+    - name: Upload APK
+      uses: actions/upload-artifact@v2
+      with:
+        name: App
+        path: ${{ github.workspace}} /app/build/outputs/apk/release/app-release.apk
