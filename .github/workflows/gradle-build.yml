@@ -24,7 +24,7 @@ jobs:
       uses: gradle/gradle-build-action@v2
       with:
         gradle-version: current
-        arguments: build --gradle-user-home ${{github.workspace}} /app
+        arguments: build
 
     - name: Upload APK
       uses: actions/upload-artifact@v2
